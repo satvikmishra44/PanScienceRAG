@@ -51,7 +51,7 @@ A production-ready, full-stack Retrieval-Augmented Generation (RAG) system with 
 
 
 
-## 🚀 Quick Start
+## 🚀 Quick Start In Just 2 Steps
 
 ### Prerequisites
 
@@ -80,6 +80,8 @@ This launches:
 | 🧠 **Backend (FastAPI)** | Core API | [http://localhost:8000](http://localhost:8000) |
 | 💬 **Frontend (React)** | UI Dashboard | [http://localhost:5173](http://localhost:5173) |
 
+
+Just Go To Frontend localhost port by [clicking here](http://localhost:5173) (after running the docker command) and use the application yourself. As Simple As That
 ---
 
 ### 3️⃣ Stop Containers
