@@ -42,7 +42,6 @@ def loading(path:str, file:str) -> Tuple[List[Document], int]:
     return documents, count
 
 def chunking(documents: List[Document]) -> List[Document]:
-    # ext = filename.lower().split('.')[-1] # Getting Extension
     # Chunking
     splitter = RecursiveCharacterTextSplitter(chunk_size=1500, chunk_overlap=200)
     chunked_documents = splitter.split_documents(documents)
