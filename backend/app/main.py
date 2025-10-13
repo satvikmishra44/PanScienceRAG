@@ -5,8 +5,6 @@ from typing import Dict, Any, List, Optional
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-'''Things Left To Implement Now:- Adding Context Awareness Upto Past 3-4 Responses(If Their Are), and Limiting Upload upto 1000 pages for a single pdf and for more than 20 documents, then have to create a docker file and run it one last time and done'''
-
 app = FastAPI(title="RAG Server")
 
 origins = ["http://localhost:5173"]
