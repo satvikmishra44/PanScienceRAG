@@ -100,7 +100,6 @@ function Chat({backendUrl}) {
 
             {/* Message Display Area (Chat History) */}
             <div className="flex-grow overflow-y-auto space-y-3 p-2 bg-gray-50 rounded-lg border border-gray-100 mb-4">
-                {messages.length === 0 && (
                     <div className='text-center p-10 text-gray-500 italic cursor-pointer' onClick={() => navigate('/docs')}>
                         <div>
                             Ask a question about your indexed documents to begin.
@@ -109,7 +108,7 @@ function Chat({backendUrl}) {
                             Click Here To See Indexed Documents Or Add One
                         </div>
                     </div>
-                )}
+                {messages.length === 0 ? <br/> : <hr/>}
                 {messages.map((msg, index) => (
                     <ChatMessage key={index} msg={msg} />
                 ))}

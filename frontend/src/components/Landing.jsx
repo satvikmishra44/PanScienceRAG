@@ -12,7 +12,7 @@ function Landing() {
                 Creating Solutions Faster Than Thoughts
                 <button
                     className="inline-block mt-6 cursor-pointer items-center justify-center rounded-lg border border-zinc-600 bg-zinc-950 px-4 py-2 text-base font-medium text-slate-200 shadow-md transition-all duration-300 hover:[transform:translateY(-.25rem)] hover:shadow-lg"
-                    onClick={() => navigate('/chat')}
+                    onClick={() => navigate('/docs')}
                 >
                     Start Now
                     <span className="text-slate-300/85"> & Harness AI</span>

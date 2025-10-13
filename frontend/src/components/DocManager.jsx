@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function DocManager({backendUrl}) {
 
@@ -6,6 +7,8 @@ function DocManager({backendUrl}) {
     const [documents, setDocuments] = useState([]);
     const [status, setStatus] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+
+    const navigate = useNavigate();
 
     const fetchDocs = async() => {
         try{
@@ -80,7 +83,8 @@ function DocManager({backendUrl}) {
         }
     }
 
-    const limitReached = documents.length >= 5;
+    const limitReached = documents.length >= 20;
+    const noUpload = documents.length === 0;
 
     return (
         <div className="p-6 bg-white shadow-xl rounded-xl h-full flex flex-col">
@@ -111,7 +115,7 @@ function DocManager({backendUrl}) {
                 </div>
                 {limitReached ? (
                     <p className="mt-2 text-sm text-red-600 font-semibold">
-                        ❌ Can’t upload more than 5 documents. Hire Satvik To Resolve This And Unlock The True Potential.
+                        ❌ Can’t upload more than 20 documents. Hire Satvik To Resolve This And Unlock The True Potential.
                     </p>
                 ) : (
                     status && (
@@ -125,6 +129,15 @@ function DocManager({backendUrl}) {
                     )
                 )}
             </div>
+
+            <button
+                onClick={() => navigate('/chat')}
+                disabled={noUpload}
+                className={`mt-6 px-5 py-3 ${noUpload ? "bg-red-600" : "bg-green-600"} text-white font-semibold rounded-lg shadow-md 
+                    ${noUpload ? "hover:bg-red-700" : "hover:bg-green-700"} transition duration-150 mb-4`}
+            >
+                {noUpload ? "Please Upload A Document First" : "💬 Go to Chat"}
+            </button>
 
             {/* Document List Section */}
             <h3 className="text-xl font-semibold text-gray-700 mb-3">
