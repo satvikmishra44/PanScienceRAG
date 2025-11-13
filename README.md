@@ -57,7 +57,7 @@ A production-ready, full-stack Retrieval-Augmented Generation (RAG) system with 
 
 - Docker & Docker Compose (recommended)
 - OR Python 3.12+ & Node.js 20+
-- Google Gemini API Key ([Get one here](https://makersuite.google.com/app/apikey)) Exposed in .env for your convenience
+- Google Gemini API Key ([Get one here](https://makersuite.google.com/app/apikey))
 
 ### 1️⃣ Clone Repository
 
@@ -266,5 +266,4 @@ docker-compose down
 ### 🧾 Notes
 - Ensure MongoDB and ChromaDB services are running before ingesting documents.  
 - Large PDFs are automatically chunked for efficient retrieval.  
-- API Keys Are Exposed In .env for your testing
 
